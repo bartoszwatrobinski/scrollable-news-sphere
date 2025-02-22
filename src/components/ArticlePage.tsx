@@ -38,10 +38,7 @@ export const ArticlePage = () => {
       </Button>
       <Card>
         <CardHeader className="space-y-4">
-          <div className="flex items-center gap-4">
-            <time className="text-muted-foreground">{article.date}</time>
-            <Badge variant="secondary">{article.category}</Badge>
-          </div>
+          <Badge variant="secondary">{article.category}</Badge>
           <h1 className="text-4xl font-bold">{article.title}</h1>
         </CardHeader>
         <CardContent className="space-y-8">

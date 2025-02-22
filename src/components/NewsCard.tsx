@@ -6,13 +6,12 @@ import { Badge } from "@/components/ui/badge";
 interface NewsCardProps {
   id: string;
   title: string;
-  date: string;
   category: string;
   image: string;
   excerpt: string;
 }
 
-export const NewsCard = ({ id, title, date, category, image, excerpt }: NewsCardProps) => {
+export const NewsCard = ({ id, title, category, image, excerpt }: NewsCardProps) => {
   return (
     <Link to={`/article/${id}`} className="block no-underline">
       <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden mb-6">
@@ -28,7 +27,6 @@ export const NewsCard = ({ id, title, date, category, image, excerpt }: NewsCard
           <div className="md:w-2/3">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-4 mb-2">
-                <span className="text-sm text-muted-foreground">{date}</span>
                 <Badge variant="secondary" className="rounded-full">
                   {category}
                 </Badge>
